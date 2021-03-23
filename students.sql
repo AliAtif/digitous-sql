@@ -1,0 +1,1 @@
+CREATE TABLE school (id INT, name CHAR(20), City CHAR (30), PRIMARY KEY (id)

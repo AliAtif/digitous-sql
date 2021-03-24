@@ -8,7 +8,7 @@
 --     INSERT INTO students VALUES ('Véronique', 'Paris');
 
  CREATE TABLE students
-( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,,name VARCHAR(30),city VARCHAR(30));
+( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,name VARCHAR(30),city VARCHAR(30));
 
 INSERT INTO students (name, city)
  VALUES
@@ -30,3 +30,5 @@ INSERT INTO languages (name)
  ('Spanish'),
  ('Mandarin');
  
+ CREATE TABLE favorites
+( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,class VARCHAR(30),sport VARCHAR(30), student_id INt);

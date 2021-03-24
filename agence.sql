@@ -4,11 +4,18 @@ CREATE TABLE Candidates ( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,first_name 
 
  INSERT INTO Candidates (first_name, last_name, birthday, salary, portfolio, github)
  VALUES
- ('Véronique', 'Fabien', 01/01/1995, 3500, 'Veroniqueportfolio', 'Veronique.github.io'),
- ('Steeven', 'Vicotr', 01/03/1992, 3500, 'Steevenportfolio', 'Steeven.github.io'),
- ('Marc', 'Jilles', 01/02/1994, 3200, 'Marcportfolio', 'Marc.github.io'),
- ('Nour', 'Pantier', 01/02/1993, 3000, 'Nourportfolio', 'Nour.github.io'),
- ('Sophie', 'Alexis',  01/02/1994, 3000, 'Nourportfolio', 'Nour.github.io');
+ ('Véronique', 'Fabien', 01/01/1995, 5100, 'Veroniqueportfolio', 'Veronique.github.io'),
+ ('Steeven', 'Vicotr', 01/03/1992, 3700, 'Steevenportfolio', 'Steeven.github.io'),
+ ('Marc', 'Jilles', 01/02/1994, 3500, 'Marcportfolio', 'Marc.github.io'),
+ ('Nour', 'Pantier', 01/02/1993, 3400, 'Nourportfolio', 'Nour.github.io'),
+ ('Sophie', 'Alexis',  01/02/1994, 4000, 'Nourportfolio', 'Nour.github.io');
+
+UPDATE Candidates SET salary = 51000 WHERE id = 1;
+UPDATE Candidates SET salary = 37000 WHERE id = 2;
+UPDATE Candidates SET salary = 35000 WHERE id = 3;
+UPDATE Candidates SET salary = 34000 WHERE id = 4;
+UPDATE Candidates SET salary = 40000 WHERE id = 5;
+
 
 
   CREATE TABLE Languages
@@ -42,3 +49,19 @@ INSERT INTO Languages (name, candidate_id)
  ('React', 2),
  ('Express', 4),
  ('React', 5);
+
+
+ SELECT * FROM candidates;
+
+ SELECT COUNT(*) FROM candidates;
+
+ SELECT * FROM candidates WHERE birthday >=1991;
+
+SELECT * FROM candidates WHERE salary < 50000;
+
+SELECT * FROM candidates WHERE portfolio=portfolio;
+
+SELECT * FROM candidates WHERE github=github;
+
+SELECT * FROM candidates WHERE portfolio=portfolio AND github=github;
+

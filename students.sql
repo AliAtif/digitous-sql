@@ -19,4 +19,14 @@ INSERT INTO students (name, city)
  ('Romain', 'Paris'),
  ('Sophie', 'Paris');
 
+ CREATE TABLE languages
+( id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,name VARCHAR(30) );
+
+INSERT INTO languages (name)
+ VALUES
+ ('French'),
+ ('English'),
+ ('German'),
+ ('Spanish'),
+ ('Mandarin');
  

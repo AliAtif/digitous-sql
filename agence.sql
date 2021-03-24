@@ -59,9 +59,9 @@ INSERT INTO Languages (name, candidate_id)
 
 SELECT * FROM candidates WHERE salary < 50000;
 
-SELECT * FROM candidates WHERE portfolio=portfolio;
+SELECT * FROM candidates WHERE portfolio = candidates.portfolio;
 
-SELECT * FROM candidates WHERE github=github;
+SELECT * FROM candidates WHERE github = candidates.github;
 
-SELECT * FROM candidates WHERE portfolio=portfolio AND github=github;
+SELECT * FROM candidates WHERE portfolio = candidates.portfolio AND github = candidates.github;
 

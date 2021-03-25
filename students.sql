@@ -86,18 +86,24 @@ SELECT name FROM students WHERE city = 'Lyon';
 --  Rapport lvl 2
 -- 1. Pour l’étudiant.e d’ID 5, récupérer toutes les colonnes sur l’étudiant.e et ses activités favorites
 SELECT * FROM students INNER JOIN favorites ON students.id = favorites.student_id WHERE students.id = 5;
+
 -- 2. Pour l’étudiant.e d’ID 4, récupérer son nom et son sport préféré
 SELECT name, sport FROM students INNER JOIN favorites ON students.id = favorites.student_id WHERE students.id = 4;
 -- autre façon @Yeshi
 SELECT students.name, favorites.sport FROM students, favorites WHERE students.id = 4 AND favorites.student_id = 4;
+
 -- 3. Pour l’étudiant.e d’ID 1, récupérer son nom et sa matière préférée
 SELECT name, class FROM students INNER JOIN favorites ON students.id = favorites.student_id WHERE students.id = 1;
+
 -- 4. Récupérer toutes les colonnes de l’étudiant.e qui aime la musique
 SELECT * FROM students INNER JOIN favorites ON students.id = favorites.student_id WHERE favorites.class = 'Music';
+
 -- 5. Récupérer le nom des étudiant.e.s qui aime le tennis
 SELECT name FROM students INNER JOIN favorites ON students.id = favorites.student_id WHERE favorites.sport = 'Tennis';
+
 -- 6. Récupérer le nom des étudiant.e.s qui aime les matières artistiques
 SELECT name FROM students INNER JOIN favorites ON students.id = favorites.student_id WHERE favorites.class = 'Arts';
+
 -- 7. Récupérer le nombre d’étudiant.e.s de la ville de Paris
 SELECT students.id, name, count(*) as languagesCount FROM students INNER JOIN students_languages ON 
 students_languages.student_id = students.id group by students.id;
@@ -105,5 +111,7 @@ students_languages.student_id = students.id group by students.id;
 
 -- Rapport lvl 3
 SELECT name FROM students WHERE name LIKE '%e%'
+
 SELECT name, sport FROM students JOIN favorites ON students.id = favorites.student_id WHERE name LIKE '%e%'
+
 SELECT name, class, city FROM students JOIN favorites ON students.id = favorites.student_id WHERE paris LIKE '%i%'
